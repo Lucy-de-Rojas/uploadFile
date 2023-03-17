@@ -5,8 +5,8 @@ export default function index() {
 
 
   return (<div>
-    <h1>home page</h1>
-    <Link href='uploadform'>Upload form apge</Link>
+    <h1>home page for upload</h1>
+
   </div>);
 
 };
