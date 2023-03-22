@@ -29,10 +29,16 @@ export default function Upload() {
     // sending to server:
     async function uploadToServer(event) {
 
+        console.clear();
+
+        console.log('upload to server function');
+
         const body = new FormData();
 
         body.append('file', image);
         console.log('body:>>>> ',body);
+
+
 
 
     }
