@@ -12,7 +12,7 @@ export default function Upload() {
 
 
 
-
+// displaying on page:
     function uploadToClient(event) {
         if(event.target.files && event.target.files[0]) {
             const i = event.target.files[0];
@@ -20,6 +20,21 @@ export default function Upload() {
             setImage(i);
             setCreateObjectURL(URL.createObjectURL(i));
         }
+    }
+
+
+
+
+
+    // sending to server:
+    async function uploadToServer(event) {
+
+        const body = new FormData();
+
+        body.append('file', image);
+        console.log('body:>>>> ',body);
+
+
     }
 
 
@@ -49,6 +64,14 @@ export default function Upload() {
         name='myImage'
         onChange={uploadToClient}
 />
+
+
+
+<br />
+<button
+    onClick={uploadToServer}
+    type='submit'
+>Upload</button>
 
 
 
